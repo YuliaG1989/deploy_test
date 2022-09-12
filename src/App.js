@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Add from './components/Add.js';
 import Edit from './components/Edit.js';
-import 'bootstrap/dist/css/bootstrap.css'
+
 import { Button } from 'react-bootstrap';
 function App() {
 
