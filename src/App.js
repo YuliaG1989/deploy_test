@@ -12,7 +12,7 @@ function App() {
   //======READ CHARACTER========//
 
   const getCharacters =()=>{
-    axios.get('http://localhost:8000/api/characters').then((response)=>{
+    axios.get('https://sample-deploy.onrender.com/api/characters').then((response)=>{
     
         setCharacters(response.data)
     
@@ -25,7 +25,7 @@ function App() {
 
    const handleCreate = (addCharacter) => {
     axios
-      .post('http://localhost:8000/api/characters', addCharacter)
+      .post('https://sample-deploy.onrender.com/api/characters/', addCharacter)
       .then((response) => {
         console.log(response)
         getCharacters()
@@ -35,7 +35,7 @@ function App() {
   //======DELETE CHARACTER========//
   const handleDelete = (event) => {
     axios
-      .delete('http://localhost:8000/api/characters/' + event.target.value)
+      .delete('https://sample-deploy.onrender.com/api/characters/' + event.target.value)
       .then((response) => {
         getCharacters()
       })
@@ -44,7 +44,7 @@ function App() {
   const handleUpdate = (editCharacter) => {
  
     axios
-      .put('http://localhost:8000/api/characters/' + editCharacter.id, editCharacter)
+      .put('https://sample-deploy.onrender.com/api/characters/' + editCharacter.id, editCharacter)
       .then((response) => {
         getCharacters()
       })
