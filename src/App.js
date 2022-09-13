@@ -25,7 +25,7 @@ function App() {
 
    const handleCreate = (addCharacter) => {
     axios
-      .post('https://sample-deploy.onrender.com/api/characters/', addCharacter)
+      .post('https://sample-deploy.onrender.com/api/characters', addCharacter)
       .then((response) => {
         console.log(response)
         getCharacters()
